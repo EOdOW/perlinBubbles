@@ -8,7 +8,7 @@ class Bubble {
         //main bubble container
         this.d3el = d3.select(document.getElementById("svg_bubble_container"));
     }
-    
+    //Draw bubble
     createSelf() {
     	this.d3el.data([{cx:this.x, cy: this.y}]).append('circle')
             .classed('circle_' + this.idx, true)
@@ -17,7 +17,7 @@ class Bubble {
 			.attr('cy', function(d){return d.cy;})
 			.attr('fill', 'white');
     }
-
+    //Move Bubble
     move(){
         var dur = 500 * this.r;
         var r = this.r;
